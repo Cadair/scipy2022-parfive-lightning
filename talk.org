@@ -23,7 +23,7 @@ Parfive is a library written to make downloading files from the internet in Pyth
 
 * Example
 
-#+REVEAL_HTML: <script id="asciicast-508356" src="https://asciinema.org/a/508356.js" async></script>
+#+REVEAL_HTML: <script id="asciicast-508356" src="https://asciinema.org/a/508356.js" async data-size="big" data-loop=1></script>
 
 #+BEGIN_NOTES
   - Simple Python API.
@@ -36,7 +36,7 @@ Parfive is a library written to make downloading files from the internet in Pyth
 
 * Notebook
 
-#+REVEAL_HTML: <video controls loop><source src="images/parfive_notebook_clipped.mp4" type="video/mp4"></video> 
+#+REVEAL_HTML: <video loop data-autoplay><source src="images/parfive_notebook_clipped.mp4" type="video/mp4"></video> 
 
 #+BEGIN_NOTES
   - Many options for controlling parallelism.
