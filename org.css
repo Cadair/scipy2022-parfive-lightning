@@ -1,5 +1,6 @@
 body {
     font-family: Lato, Ariel, sans-serif !important;
+    color: black;
 }
 
 .reveal {
@@ -21,4 +22,11 @@ body {
 .right {
     width: 49%;
     float: right;
+}
+
+.slide-footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
 }

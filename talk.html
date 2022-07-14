@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Parfive: A parallel file downloading library for Python</title>
+<meta name="author" content="(Stuart Mumford)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./src/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="./src/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="org.css"/>
+<link rel="stylesheet" href="./src/reveal.js/plugin/highlight/monokai.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './src/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="./images/background_1.jpg"><h3>Parfive: A parallel file downloading library for Python</h3>
+<h4>Stuart Mumford</h4>
+<a href="https://aperio.software"><img style='align: center; width: 30%; margin-top: 100px; height: 25%;' src='images/aperio.svg'/></a>
+</section>
+
+<section>
+<section id="slide-orge210f80" data-background="./images/background_1.jpg">
+<h2 id="orge210f80">Parfive</h2>
+<p>
+Parfive is a library written to make downloading files from the internet in Python fast and easy.
+</p>
+
+<div class="slide-footer"><a href="https://github.com/Cadair/parfive">https://github.com/Cadair/parfive</a></div>
+</section>
+</section>
+<section>
+<section id="slide-orgbf0143e" data-background="./images/background_1.jpg">
+<h2 id="orgbf0143e">Example</h2>
+<script id="asciicast-508356" src="https://asciinema.org/a/508356.js" async></script>
+
+<aside class="notes">
+<ul>
+<li>Simple Python API.</li>
+<li>Downloads more than one file at a time (five by default).</li>
+<li>Downloads each file in more than one chunk.</li>
+<li>Uses asyncio underneath, can be used in an asyncio application with aio-files support.</li>
+<li>Pretty progress bars with tqdm</li>
+<li>Clear <code>Results</code> object with downloaded filenames and error information.</li>
+
+</ul>
+
+</aside>
+
+<div class="slide-footer"><a href="https://github.com/Cadair/parfive">https://github.com/Cadair/parfive</a></div>
+</section>
+</section>
+<section>
+<section id="slide-org98bc903" data-background="./images/background_1.jpg">
+<h2 id="org98bc903">Notebook</h2>
+<video controls loop><source src="images/parfive_notebook_clipped.mp4" type="video/mp4"></video>
+
+<aside class="notes">
+<ul>
+<li>Many options for controlling parallelism.</li>
+<li>Skip if file exists, overwrite or unique filename options.</li>
+<li>Can pass many options through to underlying <code>aiohttp</code> and <code>aioftp</code> libraries.</li>
+
+</ul>
+
+</aside>
+<div class="slide-footer"><a href="https://github.com/Cadair/parfive">https://github.com/Cadair/parfive</a></div>
+</section>
+</section>
+</div>
+</div>
+<script src="./src/reveal.js/dist/reveal.js"></script>
+<script src="./src/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="./src/reveal.js/plugin/notes/notes.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealHighlight, RevealNotes]
+});
+
+</script>
+</body>
+</html>

@@ -2,70 +2,44 @@
 #+REVEAL_MATHJAX_URL: ./src/mathjax/es5/tex-chtml.js
 #+REVEAL_HIGHLIGHT_CSS: %r/plugin/highlight/monokai.css
 #+REVEAL_PLUGINS: (highlight notes)
-#+REVEAL_THEME: simple
 #+REVEAL_DEFAULT_SLIDE_BACKGROUND: ./images/background_1.jpg
 #+REVEAL_TITLE_SLIDE_BACKGROUND: ./images/background_1.jpg
+#+REVEAL_THEME: simple
 #+OPTIONS: toc:nil
 #+OPTIONS: num:nil
 #+REVEAL_EXTRA_CSS: org.css
+#+REVEAL_SLIDE_FOOTER: <a href="https://github.com/Cadair/parfive">https://github.com/Cadair/parfive</a>
+#+REVEAL_GLOBAL_FOOTER:t
 
-#+TITLE: SunPy: Python for Solar Physics
+#+TITLE: Parfive: A parallel file downloading library for Python
 #+AUTHOR: Stuart Mumford
 #+REVEAL_TITLE_SLIDE: <h3>%t</h3>
 #+REVEAL_TITLE_SLIDE: <h4>%a</h4>
-#+REVEAL_TITLE_SLIDE: <a href="https://aperio.software"><img style='float: left; width: 30%%; margin-top: 100px; height: 25%%;' src='images/aperio.svg'/></a><a href="https://sunpy.org"><img style='float: right; width: 30%%; margin-top: 100px; height: 25%%; margin-right: 5%%;' src='images/sunpy.svg'/></a>
+#+REVEAL_TITLE_SLIDE: <a href="https://aperio.software"><img style='align: center; width: 30%%; margin-top: 100px; height: 25%%;' src='images/aperio.svg'/></a>
 
-* Me
+* Parfive
 
-#+REVEAL_HTML: <div class='left'>
+Parfive is a library written to make downloading files from the internet in Python fast and easy.
 
-Find me online:
+* Example
 
-- [[http://stuartmumford.uk][stuartmumford.uk]]
-- [[https://matrix.to/#/@cadair:cadair.com][@cadair:cadair.com]] on Matrix
-- [[https://github.com/Cadair][@Cadair]] on GitHub
-- [[https://twitter.com/stuartmumford][@stuartmumford]] on Twitter
+#+REVEAL_HTML: <script id="asciicast-508356" src="https://asciinema.org/a/508356.js" async></script>
 
-#+REVEAL_HTML: </div>
+#+BEGIN_NOTES
+  - Simple Python API.
+  - Downloads more than one file at a time (five by default).
+  - Downloads each file in more than one chunk.
+  - Uses asyncio underneath, can be used in an asyncio application with aio-files support.
+  - Pretty progress bars with tqdm
+  - Clear ~Results~ object with downloaded filenames and error information.
+#+END_NOTES
 
-#+REVEAL_HTML: <div class='right'>
+* Notebook
 
-#+attr_html: :width 500px
-[[./images/cadair.jpg]]
+#+REVEAL_HTML: <video controls loop><source src="images/parfive_notebook_clipped.mp4" type="video/mp4"></video> 
 
-#+REVEAL_HTML: </div>
-
-# Some Maths
-* Maths!
-
-${n! \over k!(n-k)!} = {n \choose k}$
-
-\begin{equation}
-x=\sqrt{b}
-\end{equation}
-
-If $a^2=b$ and \( b=2 \), then the solution must be either $$ a=+\sqrt{2} $$ or \[ a=-\sqrt{2} \].
-
-* Code example with Babel
-
-#+begin_src python :session example :exports both
-  msg = "Hello World"
-
-  msg
-#+end_src
-
-#+RESULTS:
-: Hello World
-
-# AIA
-*
-  :PROPERTIES:
-  :reveal_background: ./images/fulldiskmulticolor.jpg
-  :reveal_background_trans: slide
-  :END:
-
-# DKIST
-*
-  :PROPERTIES:
-  :reveal_extra_attr: data-background-video="" data-background-video-loop=true
-  :END:
+#+BEGIN_NOTES
+  - Many options for controlling parallelism.
+  - Skip if file exists, overwrite or unique filename options.
+  - Can pass many options through to underlying ~aiohttp~ and ~aioftp~ libraries.
+#+END_NOTES
